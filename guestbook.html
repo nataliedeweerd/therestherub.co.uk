@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reviews — There's The Rub, Norwich</title>
+  <meta name="description" content="Read Google reviews for There's The Rub — Shiatsu backrubs in Norwich. Leave your own review on Google." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .rating-summary {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    .rating-summary__score {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .rating-summary__stars {
+      color: var(--gold);
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+    }
+    .rating-summary__count {
+      font-size: 0.85rem;
+      color: var(--ink-light);
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────── -->
+<nav class="nav">
+  <a class="nav__logo" href="index.html">There's The Rub</a>
+  <ul class="nav__links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="vouchers.html">Gift Vouchers</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="guestbook.html" class="active">Reviews</a></li>
+  </ul>
+  <button class="nav__burger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav__mobile">
+  <button class="nav__mobile-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="vouchers.html">Gift Vouchers</a>
+  <a href="contact.html">Contact</a>
+  <a href="guestbook.html">Reviews</a>
+</div>
+
+<!-- ── Page hero ──────────────────────────────────── -->
+<div class="page-hero">
+  <div class="page-hero__bg">
+    <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1600&q=80" alt="Customer reviews" />
+  </div>
+  <div class="page-hero__overlay"></div>
+  <div class="page-hero__content">
+    <p class="eyebrow">What people are saying</p>
+    <h1>Reviews</h1>
+  </div>
+</div>
+
+<!-- ── Reviews section ────────────────────────────── -->
+<section class="section">
+
+  <!-- Developer setup notice — hidden once API is configured -->
+  <div class="reviews-setup" id="reviews-setup" style="display:none;">
+    <h4>⚙️ Developer: Google Reviews Setup</h4>
+    <p>To display live Google reviews, edit <code>js/guestbook.js</code> and fill in:</p>
+    <p>1. <code>GOOGLE_API_KEY</code> — from <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noopener" style="color:var(--gold);">Google Cloud Console</a> (enable Places API New)</p>
+    <p>2. <code>PLACE_ID</code> — find yours at <a href="https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder" target="_blank" rel="noopener" style="color:var(--gold);">Place ID Finder</a></p>
+    <p style="margin-top:8px;">Until configured, sample reviews are shown below.</p>
+  </div>
+
+  <!-- Rating summary (populated by JS if API connected) -->
+  <div id="reviews-summary"></div>
+
+  <!-- Reviews grid — populated by guestbook.js -->
+  <div id="reviews-container">
+    <p class="reviews-loading">Loading reviews…</p>
+  </div>
+
+</section>
+
+<!-- ── Leave a review CTA ──────────────────────────── -->
+<div class="cta-review">
+  <p class="eyebrow">We'd love to hear from you</p>
+  <h2>Enjoyed your visit?</h2>
+  <p>We welcome your feedback! Leave a review on our Google Business Profile so we can learn what we're doing well — and where we can improve. Many thanks.</p>
+  <!--
+    Replace the link below with your actual Google review link.
+    Find it by searching your business on Google Maps → Share → Copy link
+  -->
+  <a href="https://g.page/r/YOUR_REVIEW_LINK/review"
+     target="_blank"
+     rel="noopener"
+     class="btn btn--primary">
+    Leave a Google Review →
+  </a>
+</div>
+
+<!-- ── Footer ─────────────────────────────────────── -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <div class="footer__brand">There's The Rub</div>
+      <p class="footer__tagline">Fully clothed seated Shiatsu backrubs. No appointment needed. Walk in and walk out feeling better.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="vouchers.html">Gift Vouchers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="guestbook.html">Reviews</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Visit Us</h4>
+      <ul>
+        <li><a href="contact.html">15 Pottergate, Norwich</a></li>
+        <li><a href="contact.html">NR2 1DS</a></li>
+        <li><a href="mailto:tom@TheresTheRub.co.uk">tom@TheresTheRub.co.uk</a></li>
+        <li><a href="tel:01603627020">01603 627 020</a></li>
+        <li style="margin-top:8px;color:rgba(255,255,255,1);font-size:0.82rem;">Mon–Sat 10am–6pm</li>
+        <li style="color:rgba(255,255,255,1);font-size:0.82rem;">Sun 11am–4pm (trial)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2025 There's The Rub. All rights reserved.</span>
+    <span class="footer__shakespeare">"we end the heart-ache and the thousand natural shocks that flesh is heir to…"</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/guestbook.js"></script>
+</body>
+</html>
