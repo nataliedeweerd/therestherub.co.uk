@@ -18,8 +18,14 @@ const mobileNav = document.querySelector('.nav__mobile');
 const mobileClose = document.querySelector('.nav__mobile-close');
 
 if (burger && mobileNav) {
-  burger.addEventListener('click', () => mobileNav.classList.add('open'));
-  mobileClose?.addEventListener('click', () => mobileNav.classList.remove('open'));
+  burger.addEventListener('click', function(){
+    mobileNav.classList.add('open');
+    burger.classList.add('hidden');
+  });
+  mobileClose?.addEventListener('click', function(){
+    mobileNav.classList.remove('open');
+    burger.classList.remove('hidden');
+  });
   mobileNav.querySelectorAll('a').forEach(a =>
     a.addEventListener('click', () => mobileNav.classList.remove('open'))
   );
