@@ -420,6 +420,7 @@ p {
   position: relative;
   overflow: hidden;
   min-height: 480px;
+  height:60vh;
 }
 
 /* ── Services ──────────────────────────────────────── */
@@ -435,14 +436,14 @@ p {
 
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 3px;
   margin-top: 48px;
 }
 
 .service-card {
   background: var(--white);
-  padding: 48px 36px;
+  padding: 30px;
   transition: transform 0.35s var(--ease), box-shadow 0.35s;
 }
 
